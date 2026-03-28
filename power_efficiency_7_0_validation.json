@@ -1,0 +1,23 @@
+{
+  "inputs": {
+    "start_value": 75000.0,
+    "power_growth": 0.15,
+    "efficiency_improvement": 0.07,
+    "lag_start": 0.5,
+    "lag_decay": 0.15,
+    "start_year": 2025,
+    "end_year": 2040
+  },
+  "final_value": 1733361.6810963945,
+  "growth_ratio": 1.2365591397849462,
+  "monte_carlo": {
+    "iterations": 250,
+    "p10_final": 1572018.6063793923,
+    "p50_final": 1734464.0564942472,
+    "p90_final": 1906697.9112370317
+  },
+  "gui_available": false,
+  "gui_import_error": "ModuleNotFoundError: No module named 'tkinter'",
+  "numpy_available": false,
+  "numpy_import_error": "ModuleNotFoundError: No module named 'numpy'"
+}
