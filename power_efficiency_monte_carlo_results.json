@@ -1,0 +1,466 @@
+{
+  "inputs": {
+    "start_value": 75000.0,
+    "power_growth_mean": 0.15,
+    "power_growth_std": 0.04,
+    "efficiency_improvement_mean": 0.07,
+    "efficiency_improvement_std": 0.02,
+    "lag_start": 0.5,
+    "lag_decay": 0.15,
+    "energy_price_mean": 0.05,
+    "energy_price_std": 0.015,
+    "years": 15,
+    "iterations": 2000,
+    "random_seed": 21
+  },
+  "summary": {
+    "p10_final_value": 4350.903590870785,
+    "p50_final_value": 5913.618398254931,
+    "p90_final_value": 8161.724846924983,
+    "mean_final_value": 6136.594665792471,
+    "min_final_value": 2503.7497380388763,
+    "max_final_value": 12838.161603649956,
+    "mean_final_margin_proxy": 0.1779935340387671,
+    "mean_final_energy_productivity": 1.1779846834433398
+  },
+  "representative_paths": {
+    "bearish_p10": [
+      {
+        "year_index": 0,
+        "value": 75000.0,
+        "power_growth": 0.15,
+        "efficiency_improvement": 0.07,
+        "energy_price": 0.05,
+        "energy_productivity": 1.1776753712237584,
+        "miner_margin_proxy": 0.17767537122375843
+      },
+      {
+        "year_index": 1,
+        "value": 38308.60063949887,
+        "power_growth": 0.05991689037560387,
+        "efficiency_improvement": 0.07818641075165965,
+        "energy_price": 0.07359480100136612,
+        "energy_productivity": 1.0709971301145675,
+        "miner_margin_proxy": 0.07099713011456754
+      },
+      {
+        "year_index": 2,
+        "value": 26509.558900393782,
+        "power_growth": 0.17592643394660124,
+        "efficiency_improvement": 0.07521644139191583,
+        "energy_price": 0.043430167520642673,
+        "energy_productivity": 1.218643466002396,
+        "miner_margin_proxy": 0.21864346600239593
+      },
+      {
+        "year_index": 3,
+        "value": 18485.7916710151,
+        "power_growth": 0.1596355865442747,
+        "efficiency_improvement": 0.057587237074203365,
+        "energy_price": 0.055688355763477755,
+        "energy_productivity": 1.165586863094161,
+        "miner_margin_proxy": 0.16558686309416104
+      },
+      {
+        "year_index": 4,
+        "value": 14151.834358009135,
+        "power_growth": 0.20426970283946377,
+        "efficiency_improvement": 0.05656046097668556,
+        "energy_price": 0.058047448092101064,
+        "energy_productivity": 1.2064367084450929,
+        "miner_margin_proxy": 0.20643670844509288
+      },
+      {
+        "year_index": 5,
+        "value": 10706.744549260382,
+        "power_growth": 0.1413049598171205,
+        "efficiency_improvement": 0.0828118958093889,
+        "energy_price": 0.06996349712067121,
+        "energy_productivity": 1.1629855794990762,
+        "miner_margin_proxy": 0.16298557949907622
+      },
+      {
+        "year_index": 6,
+        "value": 8792.704712340124,
+        "power_growth": 0.09587138742478543,
+        "efficiency_improvement": 0.08223862529201298,
+        "energy_price": 0.04495331879506017,
+        "energy_productivity": 1.142701828752463,
+        "miner_margin_proxy": 0.14270182875246307
+      },
+      {
+        "year_index": 7,
+        "value": 7273.130974419387,
+        "power_growth": 0.1844625655691619,
+        "efficiency_improvement": 0.050744800408812366,
+        "energy_price": 0.06667189553807072,
+        "energy_productivity": 1.1697889169381275,
+        "miner_margin_proxy": 0.16978891693812748
+      },
+      {
+        "year_index": 8,
+        "value": 5824.231243760816,
+        "power_growth": 0.13622915192975835,
+        "efficiency_improvement": 0.07655972659656891,
+        "energy_price": 0.08179540416303477,
+        "energy_productivity": 1.1373967536339749,
+        "miner_margin_proxy": 0.13739675363397486
+      },
+      {
+        "year_index": 9,
+        "value": 4907.685066692141,
+        "power_growth": 0.16541446337754445,
+        "efficiency_improvement": 0.038642068413326104,
+        "energy_price": 0.06801204632924454,
+        "energy_productivity": 1.135060834785223,
+        "miner_margin_proxy": 0.1350608347852229
+      },
+      {
+        "year_index": 10,
+        "value": 5162.9104864934425,
+        "power_growth": 0.2229784203924085,
+        "efficiency_improvement": 0.0876203541297749,
+        "energy_price": 0.03718469244349494,
+        "energy_productivity": 1.2923707118255927,
+        "miner_margin_proxy": 0.2923707118255927
+      },
+      {
+        "year_index": 11,
+        "value": 4479.23486590839,
+        "power_growth": 0.0756022475962981,
+        "efficiency_improvement": 0.08576578815702587,
+        "energy_price": 0.06065341891135412,
+        "energy_productivity": 1.109227774940305,
+        "miner_margin_proxy": 0.109227774940305
+      },
+      {
+        "year_index": 12,
+        "value": 4334.502283251843,
+        "power_growth": 0.1735982285852222,
+        "efficiency_improvement": 0.08512367854844784,
+        "energy_price": 0.057837034558469655,
+        "energy_productivity": 1.2126578721046644,
+        "miner_margin_proxy": 0.21265787210466436
+      },
+      {
+        "year_index": 13,
+        "value": 4385.017691866487,
+        "power_growth": 0.15095206365133065,
+        "efficiency_improvement": 0.0736233759718331,
+        "energy_price": 0.03846702149164022,
+        "energy_productivity": 1.1964014730334627,
+        "miner_margin_proxy": 0.19640147303346267
+      },
+      {
+        "year_index": 14,
+        "value": 4758.07019805404,
+        "power_growth": 0.19008574431872477,
+        "efficiency_improvement": 0.09329147405276332,
+        "energy_price": 0.03686735574722193,
+        "energy_productivity": 1.2658648824949583,
+        "miner_margin_proxy": 0.2658648824949583
+      },
+      {
+        "year_index": 15,
+        "value": 4350.903590870785,
+        "power_growth": 0.13814646885345103,
+        "efficiency_improvement": 0.059238832388963436,
+        "energy_price": 0.06631130770299914,
+        "energy_productivity": 1.1345790450107813,
+        "miner_margin_proxy": 0.13457904501078133
+      }
+    ],
+    "base_p50": [
+      {
+        "year_index": 0,
+        "value": 75000.0,
+        "power_growth": 0.15,
+        "efficiency_improvement": 0.07,
+        "energy_price": 0.05,
+        "energy_productivity": 1.1776753712237584,
+        "miner_margin_proxy": 0.17767537122375843
+      },
+      {
+        "year_index": 1,
+        "value": 42740.13912400255,
+        "power_growth": 0.14476789910943205,
+        "efficiency_improvement": 0.06541954378350219,
+        "energy_price": 0.05898253577824419,
+        "energy_productivity": 1.1566766002138167,
+        "miner_margin_proxy": 0.15667660021381669
+      },
+      {
+        "year_index": 2,
+        "value": 27491.29734885682,
+        "power_growth": 0.18693387897962063,
+        "efficiency_improvement": 0.07563962771602181,
+        "energy_price": 0.06878422737399888,
+        "energy_productivity": 1.2014208685481966,
+        "miner_margin_proxy": 0.20142086854819663
+      },
+      {
+        "year_index": 3,
+        "value": 19849.58520529697,
+        "power_growth": 0.1784938873718906,
+        "efficiency_improvement": 0.04317027985417308,
+        "energy_price": 0.045508890101684914,
+        "energy_productivity": 1.1780533204919692,
+        "miner_margin_proxy": 0.1780533204919692
+      },
+      {
+        "year_index": 4,
+        "value": 15427.843002412716,
+        "power_growth": 0.1055442371091297,
+        "efficiency_improvement": 0.07382384286537114,
+        "energy_price": 0.03373398917062162,
+        "energy_productivity": 1.154712141534632,
+        "miner_margin_proxy": 0.15471214153463198
+      },
+      {
+        "year_index": 5,
+        "value": 12358.02578050849,
+        "power_growth": 0.1689762789856915,
+        "efficiency_improvement": 0.08968712420076491,
+        "energy_price": 0.06186955078673373,
+        "energy_productivity": 1.2093272676322455,
+        "miner_margin_proxy": 0.20932726763224552
+      },
+      {
+        "year_index": 6,
+        "value": 11016.84736806953,
+        "power_growth": 0.1481270749007025,
+        "efficiency_improvement": 0.0763015598204771,
+        "energy_price": 0.03283948320505264,
+        "energy_productivity": 1.2034468556956175,
+        "miner_margin_proxy": 0.2034468556956175
+      },
+      {
+        "year_index": 7,
+        "value": 9181.204408285716,
+        "power_growth": 0.0983872667028693,
+        "efficiency_improvement": 0.07708127547094024,
+        "energy_price": 0.04979183143195636,
+        "energy_productivity": 1.1336757143230525,
+        "miner_margin_proxy": 0.13367571432305247
+      },
+      {
+        "year_index": 8,
+        "value": 8508.86753587489,
+        "power_growth": 0.17015869774509806,
+        "efficiency_improvement": 0.07348088081153126,
+        "energy_price": 0.0442718532318692,
+        "energy_productivity": 1.2094190554734212,
+        "miner_margin_proxy": 0.2094190554734212
+      },
+      {
+        "year_index": 9,
+        "value": 8455.069730759335,
+        "power_growth": 0.20330280985601407,
+        "efficiency_improvement": 0.0649397048880707,
+        "energy_price": 0.03627026571390797,
+        "energy_productivity": 1.2418303730619626,
+        "miner_margin_proxy": 0.24183037306196264
+      },
+      {
+        "year_index": 10,
+        "value": 7513.29736554893,
+        "power_growth": 0.16428276019208057,
+        "efficiency_improvement": 0.06658756426646761,
+        "energy_price": 0.06637888504602411,
+        "energy_productivity": 1.1696969217057975,
+        "miner_margin_proxy": 0.16969692170579753
+      },
+      {
+        "year_index": 11,
+        "value": 6629.014692242011,
+        "power_growth": 0.18809325850403744,
+        "efficiency_improvement": 0.06785017271165011,
+        "energy_price": 0.08093107480545747,
+        "energy_productivity": 1.17914389277878,
+        "miner_margin_proxy": 0.17914389277878007
+      },
+      {
+        "year_index": 12,
+        "value": 5998.789012197466,
+        "power_growth": 0.14535148269386466,
+        "efficiency_improvement": 0.07937482588607254,
+        "energy_price": 0.06925708226721243,
+        "energy_productivity": 1.1635198598082757,
+        "miner_margin_proxy": 0.16351985980827566
+      },
+      {
+        "year_index": 13,
+        "value": 5893.713764114012,
+        "power_growth": 0.1507087367478217,
+        "efficiency_improvement": 0.0901865073785742,
+        "energy_price": 0.052375236168797884,
+        "energy_productivity": 1.2018282750821534,
+        "miner_margin_proxy": 0.2018282750821534
+      },
+      {
+        "year_index": 14,
+        "value": 6152.742359308598,
+        "power_growth": 0.18134369394191854,
+        "efficiency_improvement": 0.09837045163715459,
+        "energy_price": 0.04764494656718334,
+        "energy_productivity": 1.250644878139019,
+        "miner_margin_proxy": 0.2506448781390189
+      },
+      {
+        "year_index": 15,
+        "value": 5913.618398254931,
+        "power_growth": 0.11626918309562434,
+        "efficiency_improvement": 0.038764508484168805,
+        "energy_price": 0.03886779789736247,
+        "energy_productivity": 1.1178379587516687,
+        "miner_margin_proxy": 0.11783795875166869
+      }
+    ],
+    "bullish_p90": [
+      {
+        "year_index": 0,
+        "value": 75000.0,
+        "power_growth": 0.15,
+        "efficiency_improvement": 0.07,
+        "energy_price": 0.05,
+        "energy_productivity": 1.1776753712237584,
+        "miner_margin_proxy": 0.17767537122375843
+      },
+      {
+        "year_index": 1,
+        "value": 46279.49755554366,
+        "power_growth": 0.14849247732703877,
+        "efficiency_improvement": 0.06188618680375246,
+        "energy_price": 0.03520235389725677,
+        "energy_productivity": 1.1826258654120592,
+        "miner_margin_proxy": 0.18262586541205916
+      },
+      {
+        "year_index": 2,
+        "value": 28807.160215909862,
+        "power_growth": 0.12213083874256583,
+        "efficiency_improvement": 0.023501551273434312,
+        "energy_price": 0.04480242341996477,
+        "energy_productivity": 1.0998609146698897,
+        "miner_margin_proxy": 0.09986091466988967
+      },
+      {
+        "year_index": 3,
+        "value": 22284.056887809933,
+        "power_growth": 0.17831424552385453,
+        "efficiency_improvement": 0.07408857021995642,
+        "energy_price": 0.03499152554822621,
+        "energy_productivity": 1.229574617144547,
+        "miner_margin_proxy": 0.22957461714454697
+      },
+      {
+        "year_index": 4,
+        "value": 17473.87124896312,
+        "power_growth": 0.1967351340995716,
+        "efficiency_improvement": 0.027521616898621634,
+        "energy_price": 0.03993845655191043,
+        "energy_productivity": 1.1833424561599306,
+        "miner_margin_proxy": 0.1833424561599306
+      },
+      {
+        "year_index": 5,
+        "value": 14710.97175731528,
+        "power_growth": 0.17315413432386673,
+        "efficiency_improvement": 0.08769439745083116,
+        "energy_price": 0.047142211446596534,
+        "energy_productivity": 1.2280302551390352,
+        "miner_margin_proxy": 0.2280302551390352
+      },
+      {
+        "year_index": 6,
+        "value": 12871.086862480714,
+        "power_growth": 0.18123949700040476,
+        "efficiency_improvement": 0.051500092612662876,
+        "energy_price": 0.03874557016260915,
+        "energy_productivity": 1.1989235265826026,
+        "miner_margin_proxy": 0.1989235265826026
+      },
+      {
+        "year_index": 7,
+        "value": 11134.953262328458,
+        "power_growth": 0.19517465273979984,
+        "efficiency_improvement": 0.11828611220917615,
+        "energy_price": 0.07892781660265251,
+        "energy_productivity": 1.2563519049071765,
+        "miner_margin_proxy": 0.2563519049071765
+      },
+      {
+        "year_index": 8,
+        "value": 8794.79734326112,
+        "power_growth": 0.03752210419029235,
+        "efficiency_improvement": 0.052946271614250084,
+        "energy_price": 0.04951305220566768,
+        "energy_productivity": 1.0438423093723752,
+        "miner_margin_proxy": 0.04384230937237521
+      },
+      {
+        "year_index": 9,
+        "value": 9274.373204444655,
+        "power_growth": 0.19155924310681122,
+        "efficiency_improvement": 0.1037678257669814,
+        "energy_price": 0.02869086595312583,
+        "energy_productivity": 1.2924395085552864,
+        "miner_margin_proxy": 0.29243950855528644
+      },
+      {
+        "year_index": 10,
+        "value": 9263.31091719871,
+        "power_growth": 0.15637133807040718,
+        "efficiency_improvement": 0.04336041547973518,
+        "energy_price": 0.022774199222700575,
+        "energy_productivity": 1.1818686351701095,
+        "miner_margin_proxy": 0.18186863517010954
+      },
+      {
+        "year_index": 11,
+        "value": 9057.306994999206,
+        "power_growth": 0.11273462729603191,
+        "efficiency_improvement": 0.09484660369826609,
+        "energy_price": 0.03802336231192185,
+        "energy_productivity": 1.1843015282828204,
+        "miner_margin_proxy": 0.18430152828282043
+      },
+      {
+        "year_index": 12,
+        "value": 7420.49970232423,
+        "power_growth": 0.11905618915767874,
+        "efficiency_improvement": 0.05090237324408757,
+        "energy_price": 0.08419977435681575,
+        "energy_productivity": 1.0875060796397755,
+        "miner_margin_proxy": 0.08750607963977552
+      },
+      {
+        "year_index": 13,
+        "value": 7898.820492140837,
+        "power_growth": 0.1912720775713728,
+        "efficiency_improvement": 0.11599100571557414,
+        "energy_price": 0.04736087248886624,
+        "energy_productivity": 1.2866426198879504,
+        "miner_margin_proxy": 0.28664261988795037
+      },
+      {
+        "year_index": 14,
+        "value": 8277.166868024064,
+        "power_growth": 0.17698071814599892,
+        "efficiency_improvement": 0.1230541102427788,
+        "energy_price": 0.0537436145118152,
+        "energy_productivity": 1.2736837127293195,
+        "miner_margin_proxy": 0.27368371272931946
+      },
+      {
+        "year_index": 15,
+        "value": 8161.724846924983,
+        "power_growth": 0.10285799528229614,
+        "efficiency_improvement": 0.0669334882443928,
+        "energy_price": 0.03658358710673072,
+        "energy_productivity": 1.1402567852592818,
+        "miner_margin_proxy": 0.14025678525928176
+      }
+    ]
+  }
+}

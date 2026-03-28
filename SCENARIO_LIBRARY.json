@@ -1,0 +1,49 @@
+{
+  "scenarios": [
+    {
+      "name": "bearish",
+      "start_value": 75000.0,
+      "power_growth_mean": 0.08,
+      "power_growth_std": 0.03,
+      "efficiency_improvement_mean": 0.04,
+      "efficiency_improvement_std": 0.015,
+      "lag_start": 0.65,
+      "lag_decay": 0.10,
+      "energy_price_mean": 0.08,
+      "energy_price_std": 0.02,
+      "years": 15,
+      "iterations": 2000,
+      "random_seed": 21
+    },
+    {
+      "name": "base",
+      "start_value": 75000.0,
+      "power_growth_mean": 0.15,
+      "power_growth_std": 0.04,
+      "efficiency_improvement_mean": 0.07,
+      "efficiency_improvement_std": 0.02,
+      "lag_start": 0.50,
+      "lag_decay": 0.15,
+      "energy_price_mean": 0.05,
+      "energy_price_std": 0.015,
+      "years": 15,
+      "iterations": 2000,
+      "random_seed": 21
+    },
+    {
+      "name": "bullish",
+      "start_value": 75000.0,
+      "power_growth_mean": 0.22,
+      "power_growth_std": 0.05,
+      "efficiency_improvement_mean": 0.11,
+      "efficiency_improvement_std": 0.025,
+      "lag_start": 0.38,
+      "lag_decay": 0.20,
+      "energy_price_mean": 0.04,
+      "energy_price_std": 0.012,
+      "years": 15,
+      "iterations": 2000,
+      "random_seed": 21
+    }
+  ]
+}
