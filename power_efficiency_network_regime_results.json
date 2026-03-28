@@ -1,0 +1,27 @@
+{
+  "inputs": {
+    "start_value": 75000.0,
+    "power_growth_mean": 0.15,
+    "power_growth_std": 0.04,
+    "efficiency_improvement_mean": 0.07,
+    "efficiency_improvement_std": 0.02,
+    "difficulty_growth_mean": 0.11,
+    "difficulty_growth_std": 0.03,
+    "fee_pressure_mean": 0.03,
+    "fee_pressure_std": 0.02,
+    "energy_price_mean": 0.05,
+    "energy_price_std": 0.015,
+    "lag_start": 0.5,
+    "lag_decay": 0.15,
+    "years": 15,
+    "iterations": 1500,
+    "random_seed": 34
+  },
+  "summary": {
+    "p10_final_value": 1344.346808451828,
+    "p50_final_value": 1933.4244299164156,
+    "p90_final_value": 2767.919726851561,
+    "mean_final_value": 2016.9638016798378,
+    "mean_resilience_score": 1.017031658038451
+  }
+}
