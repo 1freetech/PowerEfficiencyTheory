@@ -1,0 +1,7 @@
+Power Efficiency Theory 12.0 scenario summary
+Top case: accelerated -> final deterministic value $4,653,324 | P50 $4,693,476
+Lowest case: conservative -> final deterministic value $708,528 | P50 $718,042
+Scenario table:
+- accelerated: growth_ratio=1.3187, final=$4,653,324, p10=$4,140,215, p50=$4,693,476, p90=$5,163,074
+- base_case: growth_ratio=1.2366, final=$1,733,362, p10=$1,572,019, p50=$1,734,464, p90=$1,906,698
+- conservative: growth_ratio=1.1684, final=$708,528, p10=$640,752, p50=$718,042, p90=$773,865
