@@ -1,0 +1,80 @@
+{
+  "version": "8.0",
+  "inputs": {
+    "start_value": 75000.0,
+    "power_growth": 0.15,
+    "efficiency_improvement": 0.07,
+    "lag_start": 0.5,
+    "lag_decay": 0.15,
+    "start_year": 2025,
+    "end_year": 2040
+  },
+  "final_value": 1733361.6810963945,
+  "growth_ratio": 1.2365591397849462,
+  "monte_carlo": {
+    "iterations": 250,
+    "p10_final": 1572018.6063793923,
+    "p50_final": 1734464.0564942472,
+    "p90_final": 1906697.9112370317
+  },
+  "scenario_matrix": {
+    "scenarios": [
+      {
+        "name": "base_case",
+        "inputs": {
+          "start_value": 75000.0,
+          "power_growth": 0.15,
+          "efficiency_improvement": 0.07,
+          "lag_start": 0.5,
+          "lag_decay": 0.15,
+          "start_year": 2025,
+          "end_year": 2040
+        },
+        "growth_ratio": 1.2365591397849462,
+        "final_value": 1733361.6810963945,
+        "p10_final": 1572018.6063793923,
+        "p50_final": 1734464.0564942472,
+        "p90_final": 1906697.9112370317
+      },
+      {
+        "name": "conservative",
+        "inputs": {
+          "start_value": 75000.0,
+          "power_growth": 0.10999999999999999,
+          "efficiency_improvement": 0.05,
+          "lag_start": 0.58,
+          "lag_decay": 0.12,
+          "start_year": 2025,
+          "end_year": 2040
+        },
+        "growth_ratio": 1.1684210526315788,
+        "final_value": 708527.5406732586,
+        "p10_final": 640751.5274752472,
+        "p50_final": 718042.274157805,
+        "p90_final": 773864.6250082575
+      },
+      {
+        "name": "accelerated",
+        "inputs": {
+          "start_value": 75000.0,
+          "power_growth": 0.2,
+          "efficiency_improvement": 0.09000000000000001,
+          "lag_start": 0.42,
+          "lag_decay": 0.18,
+          "start_year": 2025,
+          "end_year": 2040
+        },
+        "growth_ratio": 1.3186813186813187,
+        "final_value": 4653324.441786034,
+        "p10_final": 4140215.489834459,
+        "p50_final": 4693476.03014399,
+        "p90_final": 5163073.677606429
+      }
+    ]
+  },
+  "summary_text": "Power Efficiency Theory 14.0 scenario summary\nTop case: accelerated -> final deterministic value $4,653,324 | P50 $4,693,476\nLowest case: conservative -> final deterministic value $708,528 | P50 $718,042\nScenario table:\n- accelerated: growth_ratio=1.3187, final=$4,653,324, p10=$4,140,215, p50=$4,693,476, p90=$5,163,074\n- base_case: growth_ratio=1.2366, final=$1,733,362, p10=$1,572,019, p50=$1,734,464, p90=$1,906,698\n- conservative: growth_ratio=1.1684, final=$708,528, p10=$640,752, p50=$718,042, p90=$773,865",
+  "gui_available": false,
+  "gui_import_error": "ModuleNotFoundError: No module named 'tkinter'",
+  "numpy_available": false,
+  "numpy_import_error": "ModuleNotFoundError: No module named 'numpy'"
+}
