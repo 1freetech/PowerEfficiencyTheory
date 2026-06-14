@@ -1,0 +1,161 @@
+{
+  "version": "17.0",
+  "inputs": {
+    "start_value": 75000.0,
+    "power_growth": 0.15,
+    "efficiency_improvement": 0.07,
+    "lag_start": 0.5,
+    "lag_decay": 0.15,
+    "start_year": 2025,
+    "end_year": 2040
+  },
+  "final_value": 1733361.6810963945,
+  "growth_ratio": 1.2365591397849462,
+  "monte_carlo": {
+    "iterations": 250,
+    "p10_final": 1572018.6063793923,
+    "p50_final": 1734464.0564942472,
+    "p90_final": 1906697.9112370317
+  },
+  "scenario_matrix": {
+    "scenarios": [
+      {
+        "name": "base_case",
+        "inputs": {
+          "start_value": 75000.0,
+          "power_growth": 0.15,
+          "efficiency_improvement": 0.07,
+          "lag_start": 0.5,
+          "lag_decay": 0.15,
+          "start_year": 2025,
+          "end_year": 2040
+        },
+        "growth_ratio": 1.2365591397849462,
+        "final_value": 1733361.6810963945,
+        "p10_final": 1572018.6063793923,
+        "p50_final": 1734464.0564942472,
+        "p90_final": 1906697.9112370317,
+        "network_regime": {
+          "inputs": {
+            "start_value": 75000.0,
+            "power_growth_mean": 0.15,
+            "power_growth_std": 0.0375,
+            "efficiency_improvement_mean": 0.07,
+            "efficiency_improvement_std": 0.0175,
+            "difficulty_growth_mean": 0.1095,
+            "difficulty_growth_std": 0.03,
+            "fee_pressure_mean": 0.03,
+            "fee_pressure_std": 0.02,
+            "energy_price_mean": 0.05,
+            "energy_price_std": 0.015,
+            "lag_start": 0.5,
+            "lag_decay": 0.15,
+            "years": 15,
+            "iterations": 750,
+            "random_seed": 84
+          },
+          "summary": {
+            "p10_final_value": 1294.6065671837302,
+            "p50_final_value": 1888.7469915864988,
+            "p90_final_value": 2663.201755790772,
+            "mean_final_value": 1951.5609651434422,
+            "mean_resilience_score": 1.01746943309054
+          }
+        }
+      },
+      {
+        "name": "conservative",
+        "inputs": {
+          "start_value": 75000.0,
+          "power_growth": 0.10999999999999999,
+          "efficiency_improvement": 0.05,
+          "lag_start": 0.58,
+          "lag_decay": 0.12,
+          "start_year": 2025,
+          "end_year": 2040
+        },
+        "growth_ratio": 1.1684210526315788,
+        "final_value": 708527.5406732586,
+        "p10_final": 640751.5274752472,
+        "p50_final": 718042.274157805,
+        "p90_final": 773864.6250082575,
+        "network_regime": {
+          "inputs": {
+            "start_value": 75000.0,
+            "power_growth_mean": 0.10999999999999999,
+            "power_growth_std": 0.027499999999999997,
+            "efficiency_improvement_mean": 0.05,
+            "efficiency_improvement_std": 0.0125,
+            "difficulty_growth_mean": 0.08029999999999998,
+            "difficulty_growth_std": 0.03,
+            "fee_pressure_mean": 0.03,
+            "fee_pressure_std": 0.02,
+            "energy_price_mean": 0.05,
+            "energy_price_std": 0.015,
+            "lag_start": 0.58,
+            "lag_decay": 0.12,
+            "years": 15,
+            "iterations": 750,
+            "random_seed": 85
+          },
+          "summary": {
+            "p10_final_value": 218.52865128750722,
+            "p50_final_value": 307.5615309258291,
+            "p90_final_value": 428.79649655054254,
+            "mean_final_value": 318.40065957162886,
+            "mean_resilience_score": 1.0095227912068163
+          }
+        }
+      },
+      {
+        "name": "accelerated",
+        "inputs": {
+          "start_value": 75000.0,
+          "power_growth": 0.2,
+          "efficiency_improvement": 0.09000000000000001,
+          "lag_start": 0.42,
+          "lag_decay": 0.18,
+          "start_year": 2025,
+          "end_year": 2040
+        },
+        "growth_ratio": 1.3186813186813187,
+        "final_value": 4653324.441786034,
+        "p10_final": 4140215.489834459,
+        "p50_final": 4693476.03014399,
+        "p90_final": 5163073.677606429,
+        "network_regime": {
+          "inputs": {
+            "start_value": 75000.0,
+            "power_growth_mean": 0.2,
+            "power_growth_std": 0.05,
+            "efficiency_improvement_mean": 0.09000000000000001,
+            "efficiency_improvement_std": 0.022500000000000003,
+            "difficulty_growth_mean": 0.146,
+            "difficulty_growth_std": 0.03,
+            "fee_pressure_mean": 0.03,
+            "fee_pressure_std": 0.02,
+            "energy_price_mean": 0.05,
+            "energy_price_std": 0.015,
+            "lag_start": 0.42,
+            "lag_decay": 0.18,
+            "years": 15,
+            "iterations": 750,
+            "random_seed": 86
+          },
+          "summary": {
+            "p10_final_value": 5634.269560869949,
+            "p50_final_value": 8268.819519286753,
+            "p90_final_value": 12186.647628597733,
+            "mean_final_value": 8617.65501344088,
+            "mean_resilience_score": 1.028974853224651
+          }
+        }
+      }
+    ]
+  },
+  "summary_text": "Power Efficiency Theory 17.0 scenario + network regime summary\nTop deterministic case: accelerated -> final $4,653,324 | P50 $4,693,476 | network P50 $8,269\nLowest deterministic case: conservative -> final $708,528 | P50 $718,042 | network P50 $308\nScenario table:\n- accelerated: growth_ratio=1.3187, deterministic_final=$4,653,324, monte_p50=$4,693,476, network_p10=$5,634, network_p50=$8,269, network_p90=$12,187, resilience=1.0290\n- base_case: growth_ratio=1.2366, deterministic_final=$1,733,362, monte_p50=$1,734,464, network_p10=$1,295, network_p50=$1,889, network_p90=$2,663, resilience=1.0175\n- conservative: growth_ratio=1.1684, deterministic_final=$708,528, monte_p50=$718,042, network_p10=$219, network_p50=$308, network_p90=$429, resilience=1.0095",
+  "gui_available": false,
+  "gui_import_error": "ModuleNotFoundError: No module named 'tkinter'",
+  "numpy_available": false,
+  "numpy_import_error": "ModuleNotFoundError: No module named 'numpy'"
+}

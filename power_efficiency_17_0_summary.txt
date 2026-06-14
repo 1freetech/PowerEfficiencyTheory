@@ -1,0 +1,7 @@
+Power Efficiency Theory 17.0 scenario + network regime summary
+Top deterministic case: accelerated -> final $4,653,324 | P50 $4,693,476 | network P50 $8,269
+Lowest deterministic case: conservative -> final $708,528 | P50 $718,042 | network P50 $308
+Scenario table:
+- accelerated: growth_ratio=1.3187, deterministic_final=$4,653,324, monte_p50=$4,693,476, network_p10=$5,634, network_p50=$8,269, network_p90=$12,187, resilience=1.0290
+- base_case: growth_ratio=1.2366, deterministic_final=$1,733,362, monte_p50=$1,734,464, network_p10=$1,295, network_p50=$1,889, network_p90=$2,663, resilience=1.0175
+- conservative: growth_ratio=1.1684, deterministic_final=$708,528, monte_p50=$718,042, network_p10=$219, network_p50=$308, network_p90=$429, resilience=1.0095
