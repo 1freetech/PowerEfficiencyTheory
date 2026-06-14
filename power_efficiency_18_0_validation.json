@@ -1,0 +1,159 @@
+{
+  "version": "18.0",
+  "audit_scope": "additive PowerVTheory Python releases in repo root",
+  "summary": {
+    "python_files_checked": 16,
+    "code_version_matches": 3,
+    "code_version_mismatches": 13,
+    "validation_json_files_checked": 12,
+    "validation_json_matches": 3,
+    "validation_json_mismatches": 9
+  },
+  "rows": [
+    {
+      "file": "PowerVTheory3.0.py",
+      "expected_version": "3.0",
+      "embedded_version": null,
+      "matches": false,
+      "validation_json": null,
+      "validation_json_version": null,
+      "validation_json_matches": null
+    },
+    {
+      "file": "PowerVTheory4.0.py",
+      "expected_version": "4.0",
+      "embedded_version": null,
+      "matches": false,
+      "validation_json": null,
+      "validation_json_version": null,
+      "validation_json_matches": null
+    },
+    {
+      "file": "PowerVTheory5.0.py",
+      "expected_version": "5.0",
+      "embedded_version": null,
+      "matches": false,
+      "validation_json": null,
+      "validation_json_version": null,
+      "validation_json_matches": null
+    },
+    {
+      "file": "PowerVTheory6.0.py",
+      "expected_version": "6.0",
+      "embedded_version": null,
+      "matches": false,
+      "validation_json": null,
+      "validation_json_version": null,
+      "validation_json_matches": null
+    },
+    {
+      "file": "PowerVTheory7.0.py",
+      "expected_version": "7.0",
+      "embedded_version": null,
+      "matches": false,
+      "validation_json": "power_efficiency_7_0_validation.json",
+      "validation_json_version": null,
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory8.0.py",
+      "expected_version": "8.0",
+      "embedded_version": "8.0",
+      "matches": true,
+      "validation_json": "power_efficiency_8_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": true
+    },
+    {
+      "file": "PowerVTheory9.0.py",
+      "expected_version": "9.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_9_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory10.0.py",
+      "expected_version": "10.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_10_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory11.0.py",
+      "expected_version": "11.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_11_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory12.0.py",
+      "expected_version": "12.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_12_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory13.0.py",
+      "expected_version": "13.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_13_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory14.0.py",
+      "expected_version": "14.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_14_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory15.0.py",
+      "expected_version": "15.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_15_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory16.0.py",
+      "expected_version": "16.0",
+      "embedded_version": "8.0",
+      "matches": false,
+      "validation_json": "power_efficiency_16_0_validation.json",
+      "validation_json_version": "8.0",
+      "validation_json_matches": false
+    },
+    {
+      "file": "PowerVTheory17.0.py",
+      "expected_version": "17.0",
+      "embedded_version": "17.0",
+      "matches": true,
+      "validation_json": "power_efficiency_17_0_validation.json",
+      "validation_json_version": "17.0",
+      "validation_json_matches": true
+    },
+    {
+      "file": "PowerVTheory18.0.py",
+      "expected_version": "18.0",
+      "embedded_version": "18.0",
+      "matches": true,
+      "validation_json": "power_efficiency_18_0_validation.json",
+      "validation_json_version": "18.0",
+      "validation_json_matches": true
+    }
+  ],
+  "summary_text": "Power Efficiency Theory 18.0 version consistency audit\nChecked 16 versioned Python files and 12 validation JSON artifacts.\nCode version matches: 3 | mismatches: 13\nValidation JSON matches: 3 | mismatches: 9\nMismatch details:\n- PowerVTheory3.0.py: expected=3.0, embedded=None, validation=None, validation_version=None\n- PowerVTheory4.0.py: expected=4.0, embedded=None, validation=None, validation_version=None\n- PowerVTheory5.0.py: expected=5.0, embedded=None, validation=None, validation_version=None\n- PowerVTheory6.0.py: expected=6.0, embedded=None, validation=None, validation_version=None\n- PowerVTheory7.0.py: expected=7.0, embedded=None, validation=power_efficiency_7_0_validation.json, validation_version=None\n- PowerVTheory9.0.py: expected=9.0, embedded=8.0, validation=power_efficiency_9_0_validation.json, validation_version=8.0\n- PowerVTheory10.0.py: expected=10.0, embedded=8.0, validation=power_efficiency_10_0_validation.json, validation_version=8.0\n- PowerVTheory11.0.py: expected=11.0, embedded=8.0, validation=power_efficiency_11_0_validation.json, validation_version=8.0\n- PowerVTheory12.0.py: expected=12.0, embedded=8.0, validation=power_efficiency_12_0_validation.json, validation_version=8.0\n- PowerVTheory13.0.py: expected=13.0, embedded=8.0, validation=power_efficiency_13_0_validation.json, validation_version=8.0\n- PowerVTheory14.0.py: expected=14.0, embedded=8.0, validation=power_efficiency_14_0_validation.json, validation_version=8.0\n- PowerVTheory15.0.py: expected=15.0, embedded=8.0, validation=power_efficiency_15_0_validation.json, validation_version=8.0\n- PowerVTheory16.0.py: expected=16.0, embedded=8.0, validation=power_efficiency_16_0_validation.json, validation_version=8.0"
+}

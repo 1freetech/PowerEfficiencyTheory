@@ -1,0 +1,18 @@
+Power Efficiency Theory 18.0 version consistency audit
+Checked 16 versioned Python files and 12 validation JSON artifacts.
+Code version matches: 3 | mismatches: 13
+Validation JSON matches: 3 | mismatches: 9
+Mismatch details:
+- PowerVTheory3.0.py: expected=3.0, embedded=None, validation=None, validation_version=None
+- PowerVTheory4.0.py: expected=4.0, embedded=None, validation=None, validation_version=None
+- PowerVTheory5.0.py: expected=5.0, embedded=None, validation=None, validation_version=None
+- PowerVTheory6.0.py: expected=6.0, embedded=None, validation=None, validation_version=None
+- PowerVTheory7.0.py: expected=7.0, embedded=None, validation=power_efficiency_7_0_validation.json, validation_version=None
+- PowerVTheory9.0.py: expected=9.0, embedded=8.0, validation=power_efficiency_9_0_validation.json, validation_version=8.0
+- PowerVTheory10.0.py: expected=10.0, embedded=8.0, validation=power_efficiency_10_0_validation.json, validation_version=8.0
+- PowerVTheory11.0.py: expected=11.0, embedded=8.0, validation=power_efficiency_11_0_validation.json, validation_version=8.0
+- PowerVTheory12.0.py: expected=12.0, embedded=8.0, validation=power_efficiency_12_0_validation.json, validation_version=8.0
+- PowerVTheory13.0.py: expected=13.0, embedded=8.0, validation=power_efficiency_13_0_validation.json, validation_version=8.0
+- PowerVTheory14.0.py: expected=14.0, embedded=8.0, validation=power_efficiency_14_0_validation.json, validation_version=8.0
+- PowerVTheory15.0.py: expected=15.0, embedded=8.0, validation=power_efficiency_15_0_validation.json, validation_version=8.0
+- PowerVTheory16.0.py: expected=16.0, embedded=8.0, validation=power_efficiency_16_0_validation.json, validation_version=8.0
