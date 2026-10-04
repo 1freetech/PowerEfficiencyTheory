@@ -36,9 +36,9 @@ EMBEDDED_PATTERN = re.compile(r'"version"\s*:\s*"([^"]+)"')
 
 def normalized_implementation(text: str) -> str:
     """Remove release-only metadata so fingerprints reflect implementation substance."""
-    text = re.sub(r"Power Efficiency Theory Simulator \\d+\\.\\d+", "Power Efficiency Theory Simulator <VERSION>", text)
-    text = re.sub(r'"version"\\s*:\\s*"\\d+\\.\\d+"', '"version": "<VERSION>"', text)
-    text = re.sub(r"power_efficiency_\\d+_\\d+_(validation\\.json|summary\\.txt)", r"power_efficiency_<VERSION>_\\1", text)
+    text = re.sub(r"Power Efficiency Theory Simulator \d+\.\d+", "Power Efficiency Theory Simulator <VERSION>", text)
+    text = re.sub(r'"version"\s*:\s*"\d+\.\d+"', '"version": "<VERSION>"', text)
+    text = re.sub(r"power_efficiency_\d+_\d+_(validation\.json|summary\.txt)", r"power_efficiency_<VERSION>_\1", text)
     return text
 
 
