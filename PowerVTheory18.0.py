@@ -10,6 +10,7 @@ What changed in 18.0:
 from __future__ import annotations
 
 import argparse
+import ast
 import hashlib
 import json
 import re
@@ -56,8 +57,36 @@ def normalized_implementation(text: str) -> str:
     return text
 
 
+class _ReleaseMetadataNormalizer(ast.NodeTransformer):
+    """Normalize release-only string constants while preserving executable structure."""
+
+    def visit_Constant(self, node: ast.Constant) -> ast.AST:
+        if not isinstance(node.value, str):
+            return node
+        value = normalized_implementation(node.value)
+        value = re.sub(r"\b(?:version|release)\s+\d+\.\d+\b", r"\1 <VERSION>", value, flags=re.IGNORECASE)
+        if value != node.value:
+            return ast.copy_location(ast.Constant(value=value), node)
+        return node
+
+
 def implementation_fingerprint(text: str) -> str:
-    return hashlib.sha256(normalized_implementation(text).encode("utf-8")).hexdigest()
+    """Fingerprint executable structure, ignoring formatting/docstring/release-label churn."""
+    try:
+        tree = ast.parse(text)
+    except SyntaxError:
+        normalized = normalized_implementation(text)
+        return hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+
+    if tree.body and isinstance(tree.body[0], ast.Expr):
+        value = getattr(tree.body[0], "value", None)
+        if isinstance(value, ast.Constant) and isinstance(value.value, str):
+            tree.body = tree.body[1:]
+
+    tree = _ReleaseMetadataNormalizer().visit(tree)
+    ast.fix_missing_locations(tree)
+    structural = ast.dump(tree, annotate_fields=True, include_attributes=False)
+    return hashlib.sha256(structural.encode("utf-8")).hexdigest()
 
 
 def discover_python_versions(repo: Path) -> list[Path]:
@@ -111,12 +140,8 @@ def audit_versions(repo: Path) -> dict:
         expected = extract_expected_version(py_path)
         source_text = py_path.read_text(encoding="utf-8", errors="ignore")
         embedded = extract_embedded_version_from_text(source_text)
-        version_check_applicable = py_path.name not in LEGACY_VERSIONS
-        code_matches = (
-            embedded == expected
-            if version_check_applicable and expected is not None
-            else None
-        )
+        version_check_applicable = py_path.name not in LEGACY_VERSIONS and embedded is not None
+        code_matches = embedded == expected if version_check_applicable and expected is not None else None
 
         fingerprint = implementation_fingerprint(source_text)
         duplicate_of = first_seen.get(fingerprint)
