@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -25,10 +26,24 @@ class VersionAuditRow:
     validation_json: str | None
     validation_json_version: str | None
     validation_json_matches: bool | None
+    implementation_fingerprint: str
+    duplicate_of: str | None
 
 
 VERSION_PATTERN = re.compile(r"PowerVTheory(\d+\.\d+)\.py$")
 EMBEDDED_PATTERN = re.compile(r'"version"\s*:\s*"([^"]+)"')
+
+
+def normalized_implementation(text: str) -> str:
+    """Remove release-only metadata so fingerprints reflect implementation substance."""
+    text = re.sub(r"Power Efficiency Theory Simulator \\d+\\.\\d+", "Power Efficiency Theory Simulator <VERSION>", text)
+    text = re.sub(r'"version"\\s*:\\s*"\\d+\\.\\d+"', '"version": "<VERSION>"', text)
+    text = re.sub(r"power_efficiency_\\d+_\\d+_(validation\\.json|summary\\.txt)", r"power_efficiency_<VERSION>_\\1", text)
+    return text
+
+
+def implementation_fingerprint(text: str) -> str:
+    return hashlib.sha256(normalized_implementation(text).encode("utf-8")).hexdigest()
 
 
 def discover_python_versions(repo: Path) -> list[Path]:
@@ -59,9 +74,14 @@ def related_validation_file(py_path: Path, expected_version: str | None) -> Path
 
 def audit_versions(repo: Path) -> dict:
     rows: list[VersionAuditRow] = []
+    first_seen: dict[str, str] = {}
     for py_path in discover_python_versions(repo):
         expected = extract_expected_version(py_path)
-        embedded = extract_embedded_version_from_text(py_path.read_text(encoding="utf-8", errors="ignore"))
+        source_text = py_path.read_text(encoding="utf-8", errors="ignore")
+        embedded = extract_embedded_version_from_text(source_text)
+        fingerprint = implementation_fingerprint(source_text)
+        duplicate_of = first_seen.get(fingerprint)
+        first_seen.setdefault(fingerprint, py_path.name)
         validation_path = related_validation_file(py_path, expected)
         validation_version = None
         validation_matches = None
@@ -83,6 +103,8 @@ def audit_versions(repo: Path) -> dict:
                 validation_json=validation_path.name if validation_path is not None else None,
                 validation_json_version=validation_version,
                 validation_json_matches=validation_matches,
+                implementation_fingerprint=fingerprint,
+                duplicate_of=duplicate_of,
             )
         )
 
@@ -92,6 +114,7 @@ def audit_versions(repo: Path) -> dict:
     json_checks = [row for row in rows if row.validation_json is not None]
     json_matches = sum(1 for row in json_checks if row.validation_json_matches is True)
     json_mismatches = sum(1 for row in json_checks if row.validation_json_matches is False)
+    substantive_duplicates = sum(1 for row in rows if row.duplicate_of is not None)
 
     return {
         "version": "18.0",
@@ -103,6 +126,7 @@ def audit_versions(repo: Path) -> dict:
             "validation_json_files_checked": len(json_checks),
             "validation_json_matches": json_matches,
             "validation_json_mismatches": json_mismatches,
+            "substantive_duplicates": substantive_duplicates,
         },
         "rows": [asdict(row) for row in rows],
     }
@@ -111,11 +135,13 @@ def audit_versions(repo: Path) -> dict:
 def build_summary_text(report: dict) -> str:
     summary = report["summary"]
     mismatches = [row for row in report["rows"] if not row["matches"] or row["validation_json_matches"] is False]
+    duplicates = [row for row in report["rows"] if row["duplicate_of"] is not None]
     lines = [
         "Power Efficiency Theory 18.0 version consistency audit",
         f"Checked {summary['python_files_checked']} versioned Python files and {summary['validation_json_files_checked']} validation JSON artifacts.",
         f"Code version matches: {summary['code_version_matches']} | mismatches: {summary['code_version_mismatches']}",
         f"Validation JSON matches: {summary['validation_json_matches']} | mismatches: {summary['validation_json_mismatches']}",
+        f"Substantive duplicate implementations: {summary['substantive_duplicates']}",
         "Mismatch details:",
     ]
     if mismatches:
@@ -125,6 +151,10 @@ def build_summary_text(report: dict) -> str:
             )
     else:
         lines.append("- No mismatches detected.")
+    if duplicates:
+        lines.append("Substantive duplicate details:")
+        for row in duplicates:
+            lines.append(f"- {row['file']} duplicates {row['duplicate_of']} (fingerprint {row['implementation_fingerprint'][:12]})")
     return "\n".join(lines)
 
 
