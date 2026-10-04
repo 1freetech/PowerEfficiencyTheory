@@ -1,5 +1,6 @@
 {
   "version": "17.0",
+  "model_role": "research_scenario_model_not_price_forecast",
   "inputs": {
     "start_value": 75000.0,
     "power_growth": 0.15,
@@ -9,13 +10,19 @@
     "start_year": 2025,
     "end_year": 2040
   },
-  "final_value": 1733361.6810963945,
-  "growth_ratio": 1.2365591397849462,
+  "deterministic": {
+    "growth_ratio": 1.2365591397849462,
+    "final_pei_multiplier": 24.167035330948984,
+    "final_lag_factor": 0.9563228904493741,
+    "unlagged_final_value": 1812527.6498211739,
+    "lag_adjusted_final_value": 1733361.681096396
+  },
   "monte_carlo": {
-    "iterations": 250,
-    "p10_final": 1572018.6063793923,
-    "p50_final": 1734464.0564942472,
-    "p90_final": 1906697.9112370317
+    "iterations": 1000,
+    "method": "pathwise_compounded_parameter_uncertainty",
+    "p10_final": 1484102.5071475566,
+    "p50_final": 1728032.2375526796,
+    "p90_final": 2006063.927418472
   },
   "scenario_matrix": {
     "scenarios": [
@@ -31,10 +38,13 @@
           "end_year": 2040
         },
         "growth_ratio": 1.2365591397849462,
-        "final_value": 1733361.6810963945,
-        "p10_final": 1572018.6063793923,
-        "p50_final": 1734464.0564942472,
-        "p90_final": 1906697.9112370317,
+        "final_pei_multiplier": 24.167035330948984,
+        "final_lag_factor": 0.9563228904493741,
+        "final_value": 1733361.681096396,
+        "unlagged_final_value": 1812527.6498211739,
+        "p10_final": 1484102.5071475566,
+        "p50_final": 1728032.2375526796,
+        "p90_final": 2006063.927418472,
         "network_regime": {
           "inputs": {
             "start_value": 75000.0,
@@ -51,15 +61,16 @@
             "lag_start": 0.5,
             "lag_decay": 0.15,
             "years": 15,
-            "iterations": 750,
+            "iterations": 2000,
             "random_seed": 84
           },
+          "method": "directional_network_regime_proxy",
           "summary": {
-            "p10_final_value": 1294.6065671837302,
-            "p50_final_value": 1888.7469915864988,
-            "p90_final_value": 2663.201755790772,
-            "mean_final_value": 1951.5609651434422,
-            "mean_resilience_score": 1.01746943309054
+            "p10_final_value": 25242.904690842886,
+            "p50_final_value": 36609.93838487569,
+            "p90_final_value": 52245.66935860686,
+            "mean_final_value": 37949.423343894596,
+            "mean_resilience_score": 1.0926718361891636
           }
         }
       },
@@ -75,10 +86,13 @@
           "end_year": 2040
         },
         "growth_ratio": 1.1684210526315788,
-        "final_value": 708527.5406732586,
-        "p10_final": 640751.5274752472,
-        "p50_final": 718042.274157805,
-        "p90_final": 773864.6250082575,
+        "final_pei_multiplier": 10.327390584725359,
+        "final_lag_factor": 0.9147551647379347,
+        "final_value": 708527.5406732581,
+        "unlagged_final_value": 774554.2938544019,
+        "p10_final": 626696.9169861125,
+        "p50_final": 704457.1569449652,
+        "p90_final": 786790.486012183,
         "network_regime": {
           "inputs": {
             "start_value": 75000.0,
@@ -95,15 +109,16 @@
             "lag_start": 0.58,
             "lag_decay": 0.12,
             "years": 15,
-            "iterations": 750,
+            "iterations": 2000,
             "random_seed": 85
           },
+          "method": "directional_network_regime_proxy",
           "summary": {
-            "p10_final_value": 218.52865128750722,
-            "p50_final_value": 307.5615309258291,
-            "p90_final_value": 428.79649655054254,
-            "mean_final_value": 318.40065957162886,
-            "mean_resilience_score": 1.0095227912068163
+            "p10_final_value": 16163.11684901635,
+            "p50_final_value": 22653.02473084155,
+            "p90_final_value": 31677.627114573024,
+            "mean_final_value": 23488.119042638424,
+            "mean_resilience_score": 1.062178230500439
           }
         }
       },
@@ -119,10 +134,13 @@
           "end_year": 2040
         },
         "growth_ratio": 1.3186813186813187,
-        "final_value": 4653324.441786034,
-        "p10_final": 4140215.489834459,
-        "p50_final": 4693476.03014399,
-        "p90_final": 5163073.677606429,
+        "final_pei_multiplier": 63.401247884984315,
+        "final_lag_factor": 0.97859786613403,
+        "final_value": 4653324.441786025,
+        "unlagged_final_value": 4755093.591373824,
+        "p10_final": 3803218.3303598855,
+        "p50_final": 4596632.743343013,
+        "p90_final": 5624011.70123755,
         "network_regime": {
           "inputs": {
             "start_value": 75000.0,
@@ -139,23 +157,22 @@
             "lag_start": 0.42,
             "lag_decay": 0.18,
             "years": 15,
-            "iterations": 750,
+            "iterations": 2000,
             "random_seed": 86
           },
+          "method": "directional_network_regime_proxy",
           "summary": {
-            "p10_final_value": 5634.269560869949,
-            "p50_final_value": 8268.819519286753,
-            "p90_final_value": 12186.647628597733,
-            "mean_final_value": 8617.65501344088,
-            "mean_resilience_score": 1.028974853224651
+            "p10_final_value": 42235.95762185049,
+            "p50_final_value": 61815.4198878854,
+            "p90_final_value": 90439.84001769831,
+            "mean_final_value": 64525.89717258144,
+            "mean_resilience_score": 1.1289557657008709
           }
         }
       }
     ]
   },
-  "summary_text": "Power Efficiency Theory 17.0 scenario + network regime summary\nTop deterministic case: accelerated -> final $4,653,324 | P50 $4,693,476 | network P50 $8,269\nLowest deterministic case: conservative -> final $708,528 | P50 $718,042 | network P50 $308\nScenario table:\n- accelerated: growth_ratio=1.3187, deterministic_final=$4,653,324, monte_p50=$4,693,476, network_p10=$5,634, network_p50=$8,269, network_p90=$12,187, resilience=1.0290\n- base_case: growth_ratio=1.2366, deterministic_final=$1,733,362, monte_p50=$1,734,464, network_p10=$1,295, network_p50=$1,889, network_p90=$2,663, resilience=1.0175\n- conservative: growth_ratio=1.1684, deterministic_final=$708,528, monte_p50=$718,042, network_p10=$219, network_p50=$308, network_p90=$429, resilience=1.0095",
-  "gui_available": false,
-  "gui_import_error": "ModuleNotFoundError: No module named 'tkinter'",
-  "numpy_available": false,
-  "numpy_import_error": "ModuleNotFoundError: No module named 'numpy'"
+  "summary_text": "Power Efficiency Theory 17.0 analytical summary\nTop lag-adjusted case: accelerated -> $4,653,324 | PEI 63.40x | Monte Carlo P50 $4,596,633 | network proxy P50 $61,815\nLowest lag-adjusted case: conservative -> $708,528 | PEI 10.33x | Monte Carlo P50 $704,457 | network proxy P50 $22,653\nScenario table:\n- accelerated: PEI=63.40x, lag=0.979, unlagged=$4,755,094, lag_adjusted=$4,653,324, MC P10/P50/P90=$3,803,218/$4,596,633/$5,624,012, network P50=$61,815, resilience_proxy=1.1290\n- base_case: PEI=24.17x, lag=0.956, unlagged=$1,812,528, lag_adjusted=$1,733,362, MC P10/P50/P90=$1,484,103/$1,728,032/$2,006,064, network P50=$36,610, resilience_proxy=1.0927\n- conservative: PEI=10.33x, lag=0.915, unlagged=$774,554, lag_adjusted=$708,528, MC P10/P50/P90=$626,697/$704,457/$786,790, network P50=$22,653, resilience_proxy=1.0622",
+  "gui_available": true,
+  "gui_import_error": null
 }

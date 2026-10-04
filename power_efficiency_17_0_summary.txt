@@ -1,7 +1,7 @@
-Power Efficiency Theory 17.0 scenario + network regime summary
-Top deterministic case: accelerated -> final $4,653,324 | P50 $4,693,476 | network P50 $8,269
-Lowest deterministic case: conservative -> final $708,528 | P50 $718,042 | network P50 $308
+Power Efficiency Theory 17.0 analytical summary
+Top lag-adjusted case: accelerated -> $4,653,324 | PEI 63.40x | Monte Carlo P50 $4,596,633 | network proxy P50 $61,815
+Lowest lag-adjusted case: conservative -> $708,528 | PEI 10.33x | Monte Carlo P50 $704,457 | network proxy P50 $22,653
 Scenario table:
-- accelerated: growth_ratio=1.3187, deterministic_final=$4,653,324, monte_p50=$4,693,476, network_p10=$5,634, network_p50=$8,269, network_p90=$12,187, resilience=1.0290
-- base_case: growth_ratio=1.2366, deterministic_final=$1,733,362, monte_p50=$1,734,464, network_p10=$1,295, network_p50=$1,889, network_p90=$2,663, resilience=1.0175
-- conservative: growth_ratio=1.1684, deterministic_final=$708,528, monte_p50=$718,042, network_p10=$219, network_p50=$308, network_p90=$429, resilience=1.0095
+- accelerated: PEI=63.40x, lag=0.979, unlagged=$4,755,094, lag_adjusted=$4,653,324, MC P10/P50/P90=$3,803,218/$4,596,633/$5,624,012, network P50=$61,815, resilience_proxy=1.1290
+- base_case: PEI=24.17x, lag=0.956, unlagged=$1,812,528, lag_adjusted=$1,733,362, MC P10/P50/P90=$1,484,103/$1,728,032/$2,006,064, network P50=$36,610, resilience_proxy=1.0927
+- conservative: PEI=10.33x, lag=0.915, unlagged=$774,554, lag_adjusted=$708,528, MC P10/P50/P90=$626,697/$704,457/$786,790, network P50=$22,653, resilience_proxy=1.0622
