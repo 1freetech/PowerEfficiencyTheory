@@ -1,0 +1,42 @@
+name: PEI validation
+
+on:
+  push:
+    paths:
+      - "PowerVTheory*.py"
+      - "PowerETheory2.0"
+      - "MODEL_ASSUMPTIONS.md"
+      - ".github/workflows/pei-validation.yml"
+  pull_request:
+    paths:
+      - "PowerVTheory*.py"
+      - "PowerETheory2.0"
+      - "MODEL_ASSUMPTIONS.md"
+      - ".github/workflows/pei-validation.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax check current simulator and audit
+        run: python -m py_compile PowerVTheory17.0.py PowerVTheory18.0.py
+      - name: Run PEI headless validation
+        run: python PowerVTheory17.0.py --validate --iterations 250
+      - name: Run repository lineage audit
+        run: python PowerVTheory18.0.py --validate --repo .
+      - name: Verify generated JSON parses
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for name in (
+              "power_efficiency_17_0_validation.json",
+              "power_efficiency_18_0_validation.json",
+          ):
+              json.loads(Path(name).read_text(encoding="utf-8"))
+              print(f"validated {name}")
+          PY
